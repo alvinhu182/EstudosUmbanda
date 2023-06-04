@@ -8,21 +8,20 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+      background: linear-gradient(to right, #87CEEB, #1E90FF);
   }
-  
   header {
-    background-color: #333;
+    background-color: #8B4513;
     color: #fff;
-    padding: 20px;
-   
-    
+    padding: 20px; 
   }
-  
   header h1 {
     margin: 0, 0, 20px, 0;
-    
   }
-  
+  p{
+    font-size: 1.3em;
+    line-height: 2em;
+  }
   nav ul {
     list-style-type: none;
     padding: 0;
@@ -51,24 +50,53 @@ body {
   section h2 {
     margin-top: 0;
   }
+
   
   footer {
-    background-color: #333;
+    background-color: #8B4513;
     color: #fff;
     padding: 20px;
     text-align: center;
     flex-shrink: 0;
   }
+  .blocos{
+    display: grid;
+    grid-template-areas:
+    "bloco1 bloco1 bloco2 bloco2"
+    "bloco1 bloco1 bloco2 bloco2"
+    "bloco3 bloco3 bloco4 bloco4"
+    "bloco3 bloco3 bloco4 bloco4"
+  }
+
+   @media (max-width: 640px) {
+    .blocos{
+      display: grid;
+      grid-template-areas:
+      "bloco1 bloco1 "
+      "bloco2 bloco2"
+      "bloco3 bloco3"
+      "bloco4 bloco4"
+    }
+  }
+  
+  .menu-banhos{
+    line-height: 3em;
+    padding: 3em;
+  }
+  .igredientes {
+    color:darkorchid;
+  }
   .contato {
     margin-bottom: 40px;
   }
   #map {
-    margin: 50px;
+    margin: 25px;
   }
   @media (min-width: 769px) {
     .menu-toggle {
       display: none;
     }
+    
   
     .menu {
       display: flex;
@@ -110,6 +138,7 @@ body {
         .menu-toggle {
           display: none;
         }
+       
       }
 
   
@@ -125,4 +154,5 @@ body {
     footer {
       padding: 10px;
     }
+    
   }
